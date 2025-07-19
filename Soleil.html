@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vestidos Zully</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #fff;
+            color: #111;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 60px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        nav a {
+            text-decoration: none;
+            color: #111;
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #888;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            background: no-repeat center center/cover;
+            position: relative; 
+            z-index: 1;
+        }
+            /* Estilo del video de fondo */
+        #video-fondo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        }
+        .hero-content {
+            background: rgba(255,255,255,0.8);
+            padding: 40px 60px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin: 0 0 20px 0;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero-content a {
+            background: #111;
+            color: #fff;
+            padding: 12px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            transition: background 0.2s;
+        }
+        .hero-content a:hover {
+            background: #444;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            padding: 60px;
+            background: #fafafa;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .product-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .product-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+        .product-card h2 {
+            font-size: 1.2rem;
+            margin: 18px 0 8px 0;
+            font-weight: 600;
+        }
+        .product-card p {
+            color: #666;
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
+        .product-card span {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+            font-size: 0.95rem;
+            color: #888;
+        }
+        @media (max-width: 700px) {
+            header, .hero-content, .products {
+                padding: 20px;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Soleil</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Colección</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <video id="video-fondo" autoplay muted loop>
+        <source src="ropa.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+    <section class="hero">
+        <!-- <video src="ropa.mp4"> </video> -->
+        <!-- Video de fondo -->
+
+        <div class="hero-content">
+            <h1>Prendas de nuevo ingreso</h1>
+            <p>Descubre la nueva colección de prendas de alta costura inspirada en la sofisticación y el diseño contemporáneo que te encantarán.</p>
+            <a href="#">Ver Colección</a>
+        </div>
+    </section>
+    <section class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Vestido 1">
+            <h2>Mujeres</h2>
+            <p>Elegancia y glamour en cada detalle, perfecto para eventos especiales.</p>
+            <span>$2,500 MXN</span>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/1200x/b6/fa/35/b6fa35e92c5b12e4eb9c8a4035515118.jpg" alt="Vestido 2">
+            <h2>Jóvenes</h2>
+            <p>Diseño minimalista en tonos neutros, ideal para cualquier ocasión.</p>
+            <span>$4,200 MXN</span>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Vestido 3">
+            <h2>Hombres</h2>
+            <p>Corte contemporáneo y telas exclusivas para un look único.</p>
+            <span>$3,100 MXN</span>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 Vestidos Zully. Inspirado en el diseño de Prada.
+    </footer>
+</body>
+</html>
